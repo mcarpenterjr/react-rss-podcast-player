@@ -1,19 +1,19 @@
 {
-  "name": "react-rss-podcast-player",
-  "version": "1.0.1",
+  "name": "@mrpollard/react-rss-podcast-player",
+  "version": "1.0.2",
   "description": "This is a react component that provides a podcast player based on an RSS feed you provide it.",
   "main": "build/index.js",
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^17.0.2"
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
-    "moment": "^2.22.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.6.1",
-    "react-icons": "^2.2.7",
-    "rss-parser": "^3.4.2",
-    "webpack": "^3.4.1"
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "rss-parser": "^3.12.0",
+    "webpack": "^5.34.0"
   },
   "scripts": {
     "test": "jest",
@@ -25,24 +25,40 @@
       "<rootDir>/setupTests.js"
     ]
   },
-  "author": {
-    "name": "Richard Deane",
-    "email": "titchimoto@gmail.com"
-  },
+  "contributors": [
+    "Richard Deane <titchimoto@gmail.com>",
+    "Mark N Carpenter Jr <mark@mncjr.com> (https://mncarpenter.ninja)"
+  ],
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.5.1",
-    "css-loader": "^0.28.11",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-15": "^1.0.5",
-    "jest": "^23.3.0",
-    "jest-enzyme": "^6.0.2",
-    "react-test-renderer": "^15.6.2",
-    "style-loader": "^0.19.1"
-  }
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^5.2.4",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-15": "^1.4.3",
+    "jest": "^26.6.3",
+    "jest-enzyme": "^7.1.2",
+    "react-test-renderer": "^17.0.2",
+    "style-loader": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mcarpenterjr/react-rss-podcast-player.git"
+  },
+  "keywords": [
+    "react",
+    "rss",
+    "reader",
+    "podcast",
+    "player"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mcarpenterjr/react-rss-podcast-player/issues"
+  },
+  "homepage": "https://github.com/mcarpenterjr/react-rss-podcast-player#readme"
 }

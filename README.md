@@ -2,10 +2,12 @@
 
 Snappy name, huh? The React RSS Podcast Player is a React component that, when provided with a valid RSS link, will create a fully functional HTML5 based Podcast player to utilize in your projects.
 
+Forked from [https://github.com/titchimoto/react-rss-podcast-player](https://github.com/titchimoto/react-rss-podcast-player)
+
 
 # Usage
 
-###First, install...
+### First, install...
 
 	npm install react-rss-podcast-player --save
 	# or
