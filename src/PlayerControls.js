@@ -5,7 +5,7 @@ import { TiMediaPlay,
          TiMediaPause,
          TiMediaFastForward,
          TiMediaRewind
-        } from 'react-icons/lib/ti';
+        } from 'react-icons/ti';
 
 import './styles/styles.css';
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 
 // import icons
-import { TiMediaPlay, TiMediaPause } from 'react-icons/lib/ti';
+import { TiMediaPlay, TiMediaPause } from 'react-icons/ti';
 
 import './styles/styles.css';
 
