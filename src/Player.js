@@ -97,7 +97,8 @@ class Player extends Component {
     this.setState({ isLoading: true });
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     (async () => {
-      let feed = await this.rssParser.parseURL(proxyurl + url);
+      // let feed = await this.rssParser.parseURL(proxyurl + url);
+      let feed = await this.rssParser.parseURL(url);
 
       this.setState({
         feedData: feed,
