@@ -25,9 +25,6 @@ class Player extends Component {
     };
     this.audioElement = document.createElement('audio');
     this.rssParser = new RSSParser();
-  }
-
-  componentWillMount() {
     this.fetchDataFromRssFeed(this.props.url);
   }
 
@@ -94,7 +91,7 @@ class Player extends Component {
   }
 
   fetchDataFromRssFeed(url) {
-    this.setState({ isLoading: true });
+    this.state.isLoading = true;
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     (async () => {
       // let feed = await this.rssParser.parseURL(proxyurl + url);
