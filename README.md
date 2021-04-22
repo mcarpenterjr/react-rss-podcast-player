@@ -2,16 +2,24 @@
 
 Snappy name, huh? The React RSS Podcast Player is a React component that, when provided with a valid RSS link, will create a fully functional HTML5 based Podcast player to utilize in your projects.
 
-Forked from [https://github.com/titchimoto/react-rss-podcast-player](https://github.com/titchimoto/react-rss-podcast-player)
+Forked originally from [https://github.com/titchimoto/react-rss-podcast-player](https://github.com/titchimoto/react-rss-podcast-player)
 
+The original release was well made and functioned great, except it became outdated,
+really wanted to use this for a project and it just wouldn't integrate well into
+automated builds without extending and fixing some underlying issues. So a noble
+nod to the original creator. The testing suite works without issuea and deprecated
+react methods have been eliminated.
+
+Next steps are to implement Font Awesome free and SASS styles so the module can
+easily be extended to fit any theme.
 
 # Usage
 
 ### First, install...
 
-	npm install react-rss-podcast-player --save
+	npm install @mrpollard/react-rss-podcast-player --save
 	# or
-	yarn add react-rss-podcast-player  
+	yarn add @mrpollar/react-rss-podcast-player  
 
 
 <!-- -->
@@ -19,28 +27,13 @@ Forked from [https://github.com/titchimoto/react-rss-podcast-player](https://git
 ### Then...
 
 	import React, { Component } from 'react';
-	import PodcastPlayer from 'react-rss-podcast-player';
+	import PodcastPlayer from '@mrpollard/react-rss-podcast-player';
 
 	class App extends Component {
   		render () {
-	    	return <PodcastPlayer url={'https://rss.acast.com/eggchasers'} />
+	    	return <PodcastPlayer url={'https://my.cool/podcast'} />
   		}
 	}
-
-
-# Demo
-
-Here is a screenshot of the RSS Podcast Player in action with a demo podcast loaded.
-
-[Link to screenshot](https://s3.amazonaws.com/motoportfoliobucket/github/rss_podcast_player_screenshot.jpg)
-
-
-
-Extended Demo Page: [https://podcastle.herokuapp.com/](https://podcastle.herokuapp.com/)
-
-This site includes the RSS Podcast Player being used in more of a 'production' environment, and provides inspiration for a potential application of the player. Please note: the search and library functions are just provided for demo purposes and not included in this source code.
-
-
 
 # Props
 
@@ -66,4 +59,4 @@ There is also a very basic test suite included for convenience, feel free to add
 
 # Code Of Conduct
 
-For a more detailed look at our code of conduct, check it out [here](https://github.com/titchimoto/react-rss-podcast-component/blob/master/CODE_OF_CONDUCT.md)
+For a more detailed look at our code of conduct, check it out [here](https://github.com/mcarpenterjr/react-rss-podcast-component/blob/master/CODE_OF_CONDUCT.md)
