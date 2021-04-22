@@ -7,14 +7,14 @@
     "react": "^17.0.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.13.10",
+    "@babel/runtime": "^7.13.17",
     "mini-css-extract-plugin": "^1.5.0",
     "moment": "^2.29.1",
-    "react": "^16.4.0",
+    "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "rss-parser": "^3.12.0",
-    "webpack": "^5.34.0"
+    "webpack": "^5.35.0"
   },
   "scripts": {
     "test": "jest",
@@ -35,8 +35,8 @@
     "Mark N Carpenter Jr <mark@mncjr.com> (https://mncarpenter.ninja)"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.15",
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
     "@babel/plugin-transform-react-jsx": "^7.13.12",
     "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
