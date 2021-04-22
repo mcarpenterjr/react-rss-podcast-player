@@ -1,6 +1,6 @@
 {
   "name": "@mrpollard/react-rss-podcast-player",
-  "version": "1.3.0",
+  "version": "1.5.0",
   "description": "This is a react component that provides a podcast player based on an RSS feed you provide it.",
   "main": "build/index.js",
   "peerDependencies": {
