@@ -25,13 +25,23 @@ class Player extends Component {
     };
     this.audioElement = document.createElement('audio');
     this.rssParser = new RSSParser();
+    //this.rssParser = new RSSParser({
+    //  headers: {'Origin': 'http://localhost:3000',
+    //            'Access-Control-Allow-Origin': '*'},
+    //});
     this.fetchDataFromRssFeed(this.props.url);
+    this.transactionID = this.props.transactionID;
+    this.productID = this.props.productID;
+    this.eventsEndpoint = this.props.eventsEndpoint;
   }
 
   play() {
     this.audioElement.play();
     this.setState({ isPlaying: true });
     this.interval = setInterval(() => this.setState({ currentTime: this.audioElement.currentTime }), 1000);
+    if (this.state.currentTime < 0.25) {
+      this.postAnalyticsEvent("start_episode");
+    }
   }
 
   pause() {
@@ -95,6 +105,7 @@ class Player extends Component {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     (async () => {
       // let feed = await this.rssParser.parseURL(proxyurl + url);
+      this.rssParser
       let feed = await this.rssParser.parseURL(url);
 
       this.setState({
@@ -107,6 +118,25 @@ class Player extends Component {
       this.setState({ isLoading: false });
       this.audioElement.src = this.state.currentEpisode.enclosure.url;
     })().catch(alert);
+  }
+
+  postAnalyticsEvent(eventType) {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(
+        { 
+          transaction_id: this.transactionID,
+          product_id: this.productID,
+          episode_title: this.state.currentEpisode.title,
+          event_type: eventType,
+          event_timestamp: new Date().toISOString()
+        }
+      )
+    };
+    fetch(this.eventsEndpoint, requestOptions)
   }
 
   formatTime(time) {
